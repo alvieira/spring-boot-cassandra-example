@@ -16,7 +16,13 @@ import java.util.UUID;
 @Table("products")
 public class Product implements Serializable{
 
-    @PrimaryKey
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 622582932174223257L;
+	
+	
+	@PrimaryKey
     @CassandraType(type = DataType.Name.UUID)
     private UUID id;
     private String description;
